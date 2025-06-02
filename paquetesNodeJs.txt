@@ -1,0 +1,9 @@
+**para desarrollo**  -D
+NODEMON: para que no tengamos que reiniciar el servidor al hacer un cambio.  = npm i nodemon -D
+en los scripts de package.json podemos escribir uno nuevo para que se aplique
+"dev": "nodemon src/app.js"
+
+**global para toda la computadora** -g
+
+**Secundarios**
+COLORS: para aplicarle colores al texto que ponemos en la consola.   = npm i colors

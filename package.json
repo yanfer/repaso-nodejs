@@ -1,5 +1,27 @@
 {
+ "name": "repaso-nodejs",
+ "version": "1.0.0",
+ "description": "",
+ "homepage": "https://github.com/yanfer/repaso-nodejs#readme",
+ "bugs": {
+  "url": "https://github.com/yanfer/repaso-nodejs/issues"
+ },
+ "repository": {
+  "type": "git",
+  "url": "git+https://github.com/yanfer/repaso-nodejs.git"
+ },
+ "license": "ISC",
+ "author": "",
+ "type": "commonjs",
+ "main": "app.js",
+ "scripts": {
+  "start": "node app.js",
+  "dev": "nodemon app.js"
+ },
  "dependencies": {
   "colors": "^1.4.0"
+ },
+ "devDependencies": {
+  "nodemon": "^3.1.10"
  }
 }

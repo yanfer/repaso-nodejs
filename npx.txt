@@ -1,0 +1,13 @@
+npx es una herramienta de consola
+
+en los modulos de node hay una carpeta llamada .bin, alli se pueden ver los comandos que se pueden utilizar en consola
+
+una manera de llamarlos es de la siguiente manera .\node_moodules\.bin\nodemon index.js y lo va a ejecutar porque es la ruta del comando
+
+pero tambien se puede poner un script para hacerlo mas facil
+
+un modulo como ejemplo es cowsay, solo te da una vaca con texto
+
+si usamos "npx cowsay hola mundo" esto preguntara si quieres ejecutarlo y luego lo ejecutara y aparecera en la consola, PERO NO LO INSTALARA, SOLO LO PROBARA
+
+se usa mucho para el front end al hacer app como react o next
