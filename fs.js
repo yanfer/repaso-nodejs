@@ -28,24 +28,24 @@ fs.writeFileSync("./data/fourth.txt", content, {
 //vamos a hacer lo mismo que lo que hicimos arriba de manera asincrona, para hacerlo se ejecuta una funcion, para ver si se pudo hacer o hubo un error
 //Esta funcion (desde el arrow function hasta el console.log(data)) de abajo se llama un callback, porque se ejecuta despues de que se termina la tarea anterior (el fs.readFile)
 fs.readFile("./data/first.txt", "utf-8", (err, data) => {
- if (err) {
-  console.log(err);
- }
- console.log(data);
- //Dentro de un callback se puede hacer una cadena sincrona, osea que este codigo se aplica despues de terminar la tarea anterior
- fs.readFile("./data/second.txt", "utf-8", (err, data) => {
   if (err) {
-   console.log(err);
+    console.log(err);
   }
   console.log(data);
-
-  fs.writeFile(
-   "./data/newFile.txt",
-   "archivo creado asyncronamente desde fs",
-   (err, data) => {
-    console.log(err);
+  //Dentro de un callback se puede hacer una cadena sincrona, osea que este codigo se aplica despues de terminar la tarea anterior
+  fs.readFile("./data/second.txt", "utf-8", (err, data) => {
+    if (err) {
+      console.log(err);
+    }
     console.log(data);
-   }
-  );
- });
+
+    fs.writeFile(
+      "./data/newFile.txt",
+      "archivo creado asyncronamente desde fs",
+      (err, data) => {
+        console.log(err);
+        console.log(data);
+      }
+    );
+  });
 });

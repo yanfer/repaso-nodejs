@@ -13,7 +13,7 @@ console.log("first");
 //Lo que hace node para poder manejar distintas tareas al mismo tiempo es que cuando una tarea se va haciendo, ve si hay una tarea que se tendra tiempo para ejecutarse aunque sea 0 y lo pondra para despues
 
 setTimeout(() => {
- console.log("second");
+  console.log("second");
 }, 0);
 
 console.log("third");
@@ -21,24 +21,24 @@ console.log("third");
 const http = require("http");
 
 const server = http.createServer((req, res) => {
- if (req.url === "/") {
-  res.write("welcome to the server");
-  return res.end();
- }
+  if (req.url === "/") {
+    res.write("welcome to the server");
+    return res.end();
+  }
 
- if (req.url === "/about") {
-  //blocking code, este codigo bloquea el hilo de ejecucion de node, ya que no permite que que se interactue con otro hilo del servidor
-  //por eso se usa codigo asincrono, ya que se ejecuta en un segundo plano mientras el codigo se ejecuta o se trae mas peticiones
+  if (req.url === "/about") {
+    //blocking code, este codigo bloquea el hilo de ejecucion de node, ya que no permite que que se interactue con otro hilo del servidor
+    //por eso se usa codigo asincrono, ya que se ejecuta en un segundo plano mientras el codigo se ejecuta o se trae mas peticiones
 
-  /* for (let i = 0; i < 10000; i++) {
+    /* for (let i = 0; i < 10000; i++) {
    console.log(Math.random() * i);
   }
  */
 
-  return res.end("About page");
- }
+    return res.end("About page");
+  }
 
- res.end("not found");
+  res.end("not found");
 });
 
 server.listen(3000);

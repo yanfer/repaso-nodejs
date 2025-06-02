@@ -3,6 +3,8 @@ NODEMON: para que no tengamos que reiniciar el servidor al hacer un cambio.  = n
 en los scripts de package.json podemos escribir uno nuevo para que se aplique
 "dev": "nodemon src/app.js"
 
+SERVE: sirve para poder crear un servidor de manera rapida para probar el codigo  npm i serve 
+
 **global para toda la computadora** -g
 
 **Secundarios**
